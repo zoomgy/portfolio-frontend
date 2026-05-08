@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0a0a;
+  background-image: 
+    linear-gradient(rgba(168, 85, 247, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168, 85, 247, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #a855f7;
+  border-radius: 10px;
+}
+
+/* Glow effect */
+.glow {
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.1);
+}

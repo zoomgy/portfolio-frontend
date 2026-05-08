@@ -9,8 +9,14 @@ import Contact from './components/Contact'
 import Login from './admin/Login'
 import Dashboard from './admin/Dashboard'
 import ProtectedRoute from './admin/ProtectedRoute'
+import { useEffect } from 'react'
+import { initGA,trackPageView } from './analytics'
 
 function Portfolio() {
+    useEffect(() => {
+    initGA()
+    trackPageView(window.location.pathname)
+    }, [])
   return (
     <main className="bg-[#0a0a0a] text-white min-h-screen relative overflow-hidden">
       <div className="fixed top-0 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />

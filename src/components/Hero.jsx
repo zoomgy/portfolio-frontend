@@ -1,13 +1,11 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
-
-const roles = ['Software Engineer', 'Full Stack Developer', 'AI Enthusiast']
+import { TypeAnimation } from 'react-type-animation'
 
 export default function Hero() {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center px-6 relative">
 
-      {/* top right decoration */}
       <div className="absolute top-20 right-10 w-64 h-64 border border-purple-500/10 rounded-full" />
       <div className="absolute top-32 right-20 w-40 h-40 border border-purple-500/10 rounded-full" />
 
@@ -33,14 +31,33 @@ export default function Hero() {
           <span className="text-purple-400">Singh</span>
         </motion.h1>
 
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-xl md:text-2xl font-mono text-gray-500 mb-6"
+          className="text-xl md:text-2xl font-mono text-gray-500 mb-6 h-8"
         >
-          &lt; Software Engineer · Full Stack · AI &gt;
-        </motion.h2>
+          <span className="text-purple-400/50">&lt;</span>
+          <TypeAnimation
+            sequence={[
+              'Software Engineer',
+              2000,
+              'Full Stack Developer',
+              2000,
+              'AI Enthusiast',
+              2000,
+              'Spring Boot Developer',
+              2000,
+              'React Developer',
+              2000,
+            ]}
+            wrapper="span"
+            speed={50}
+            repeat={Infinity}
+            className="text-gray-400"
+          />
+          <span className="text-purple-400/50"> /&gt;</span>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -50,8 +67,8 @@ export default function Hero() {
         >
           I build scalable backend systems and modern web applications.
           Currently working at <span className="text-purple-400">Capgemini</span> with{' '}
-          <span className="text-purple-400">SpringBoot, React, AWS</span> and AI integrations
-          using <span className="text-purple-400">Microservices.</span>.
+          <span className="text-purple-400">SpringBoot, AWS</span> and AI integrations
+          using <span className="text-purple-400">Spring AI and Microservices</span>.
         </motion.p>
 
         <motion.div
@@ -81,7 +98,6 @@ export default function Hero() {
           </Link>
         </motion.div>
 
-        {/* stats row */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

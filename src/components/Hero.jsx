@@ -50,8 +50,8 @@ export default function Hero() {
         >
           I build scalable backend systems and modern web applications.
           Currently working at <span className="text-purple-400">Capgemini</span> with{' '}
-          <span className="text-purple-400">.NET, Angular, Azure</span> and AI integrations
-          using <span className="text-purple-400">Semantic Kernel</span>.
+          <span className="text-purple-400">SpringBoot, React, AWS</span> and AI integrations
+          using <span className="text-purple-400">Microservices.</span>.
         </motion.p>
 
         <motion.div

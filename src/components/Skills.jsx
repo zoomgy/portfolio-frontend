@@ -7,7 +7,7 @@ const techKeywords = [
   'docker', 'git', 'javascript', 'typescript', 'html', 'css', 'node',
   'postgresql', 'mongodb', 'redis', 'kafka', 'aws', 'kubernetes', 'c#',
   'semantic kernel', 'openai', 'rest', 'api', 'hibernate', 'maven',
-  'react','Linux Shell', 'K8s','CI/CD','Cloud Deployement','Data Structure and Algorithm'
+  'react','linux', 'k8s','ci','cloud','deployement','data'
 ]
 
 const categorize = (name) => {

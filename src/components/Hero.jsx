@@ -4,7 +4,7 @@ import { TypeAnimation } from 'react-type-animation'
 
 export default function Hero() {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center px-6 relative">
+    <section id="hero" className="min-h-screen flex items-center justify-center px-6 relative pt-24 md:pt-0">
 
       <div className="absolute top-20 right-10 w-64 h-64 border border-purple-500/10 rounded-full" />
       <div className="absolute top-32 right-20 w-40 h-40 border border-purple-500/10 rounded-full" />

@@ -28,10 +28,8 @@ function ProjectModal({ project, onClose }) {
           className="bg-[#0f0f0f] border border-gray-800 w-full max-w-3xl max-h-[90vh] overflow-y-auto relative"
           onClick={e => e.stopPropagation()}
         >
-          {/* top accent */}
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-purple-400 to-transparent" />
 
-          {/* close button */}
           <button
             onClick={onClose}
             className="absolute top-4 right-4 text-gray-500 hover:text-purple-400 transition-colors duration-200 z-10"
@@ -39,9 +37,8 @@ function ProjectModal({ project, onClose }) {
             <X size={20} />
           </button>
 
-          {/* image carousel */}
           {project.imageUrls?.length > 0 && (
-            <div className="relative w-full h-56 md:h-72 bg-gray-900 overflow-hidden">
+            <div className="relative w-full h-48 md:h-72 bg-gray-900 overflow-hidden">
               <img
                 src={project.imageUrls[imgIndex]}
                 alt={project.title}
@@ -76,23 +73,22 @@ function ProjectModal({ project, onClose }) {
             </div>
           )}
 
-          {/* content */}
-          <div className="p-8">
-            <div className="flex items-start justify-between gap-4 mb-4">
-              <h2 className="text-2xl font-bold font-mono text-white">
+          <div className="p-4 md:p-8">
+            <div className="flex items-start justify-between gap-4 mb-4 pr-6">
+              <h2 className="text-base md:text-2xl font-bold font-mono text-white">
                 {project.title}
               </h2>
-              <div className="flex gap-3 shrink-0">
+              <div className="flex gap-2 shrink-0">
                 {project.githubUrl && (
                   <a href={project.githubUrl} target="_blank" rel="noreferrer"
-                    className="flex items-center gap-1.5 text-gray-400 hover:text-purple-400 transition-colors duration-200 font-mono text-xs border border-gray-700 hover:border-purple-400 px-3 py-1.5"
+                    className="flex items-center gap-1.5 text-gray-400 hover:text-purple-400 transition-colors duration-200 font-mono text-xs border border-gray-700 hover:border-purple-400 px-2 md:px-3 py-1.5"
                   >
                     <Link2 size={14} /> Code
                   </a>
                 )}
                 {project.liveUrl && (
                   <a href={project.liveUrl} target="_blank" rel="noreferrer"
-                    className="flex items-center gap-1.5 text-purple-400 hover:text-purple-300 transition-colors duration-200 font-mono text-xs border border-purple-400 hover:border-purple-300 px-3 py-1.5"
+                    className="flex items-center gap-1.5 text-purple-400 hover:text-purple-300 transition-colors duration-200 font-mono text-xs border border-purple-400 hover:border-purple-300 px-2 md:px-3 py-1.5"
                   >
                     <ExternalLink size={14} /> Live
                   </a>
@@ -100,7 +96,6 @@ function ProjectModal({ project, onClose }) {
               </div>
             </div>
 
-            {/* tech stack */}
             {project.techStack?.length > 0 && (
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.techStack.map((tech, i) => (
@@ -111,7 +106,6 @@ function ProjectModal({ project, onClose }) {
               </div>
             )}
 
-            {/* full description */}
             <div className="border-t border-gray-800 pt-6">
               <p className="text-gray-500 font-mono text-xs mb-3 tracking-widest">// about this project</p>
               <p className="text-gray-300 leading-relaxed text-sm whitespace-pre-line">
@@ -229,7 +223,6 @@ export default function Projects() {
 
       </div>
 
-      {/* modal */}
       {selected && (
         <ProjectModal project={selected} onClose={() => setSelected(null)} />
       )}

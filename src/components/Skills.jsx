@@ -18,7 +18,7 @@ const categorize = (name) => {
 const tabs = [
   { label: 'All', value: 'all' },
   { label: 'Technical', value: 'technical' },
-  { label: 'Soft Skills', value: 'soft' },
+  { label: 'Soft', value: 'soft' },
 ]
 
 export default function Skills() {
@@ -55,12 +55,12 @@ export default function Skills() {
         </motion.div>
 
         {/* filter tabs */}
-        <div className="flex gap-1 mb-10 border-b border-gray-800">
+        <div className="flex gap-1 mb-10 border-b border-gray-800 overflow-x-auto scrollbar-hide">
           {tabs.map(tab => (
             <button
               key={tab.value}
               onClick={() => setActiveTab(tab.value)}
-              className={`px-5 py-2.5 font-mono text-sm transition-all duration-200 border-b-2 -mb-px ${
+              className={`px-5 py-2.5 font-mono text-sm transition-all duration-200 border-b-2 -mb-px whitespace-nowrap shrink-0 ${
                 activeTab === tab.value
                   ? 'text-purple-400 border-purple-400'
                   : 'text-gray-500 border-transparent hover:text-gray-300'

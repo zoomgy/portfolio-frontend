@@ -7,3 +7,5 @@ export const initGA = () => {
 export const trackPageView = (path) => {
   ReactGA.send({ hitType: 'pageview', page: path })
 }
+
+// Github Actions Trigger
